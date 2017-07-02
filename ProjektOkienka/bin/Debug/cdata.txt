@@ -1,0 +1,5 @@
+1234644 ToHaslo } FirmaTrans1 } Trans ; 1 112,79 1234567891234567 Bank1 } FirmaTrans1  } ATM | ;
+12 Haslo2 } FirmaTrans2 } Trans ; 2 1011,68 1234567891234567 Bank2 } FirmaTrans2 } ATM | 123,13 2633605963262072 Bank3 } FirmaTrans2 } Credit | ;
+12345646 123 } Sklep1 } Shop ; 1 0 123 Bank3 } Sklep1 } Debit | ;
+5654332 Haslo } Centrum Uslug } Serv ; 1 6431,53 345678 Bank4 } Centrum Uslug } Credit | ;
+123 qwe } Firma Trans3 } Trans ; 1 1776,46 87891273 Bank4 } Firma Trans3 } ATM | ;

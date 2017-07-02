@@ -1,0 +1,9 @@
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.csprojResolveAssemblyReference.cache
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.Form1.resources
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.Properties.Resources.resources
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.csproj.GenerateResource.Cache
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\bin\Debug\ProjektOkienka.exe.config
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\bin\Debug\ProjektOkienka.exe
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\bin\Debug\ProjektOkienka.pdb
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.exe
+c:\users\adam5\onedrive\dokumenty\visual studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.pdb
