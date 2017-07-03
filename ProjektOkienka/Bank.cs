@@ -9,6 +9,7 @@ namespace ProjektOkienka
         private List<Client> Clients = new List<Client>();
         private List<PaymentCard> Cards = new List<PaymentCard>();
         public string Name { get; set; }
+        public string Password { get; set; }
 
         public Bank(String SetName)
         {

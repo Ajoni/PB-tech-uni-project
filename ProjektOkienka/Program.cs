@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace ProjektOkienka
 {
+    int islogged(string login, string password)
+    {
+        foreach()
+    }
+
     static class Program
     {
         /// <summary>
@@ -16,7 +21,7 @@ namespace ProjektOkienka
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }
