@@ -47,16 +47,23 @@ namespace ProjektOkienka
             while ((line = file.ReadLine()) != null)
             {
                 string[] Words = line.Split(' ');
-                string BankName = "";
+                string BankName = "",BankPass="";
                 int i = 0;
                 while (Words[i] != ";")
                 {
-                    BankName += Words[i]; BankName += " ";
+                    BankName += Words[i]; BankName += " ";//adds space if there should be one, if not its deleted when exiting loop
                     i++;
                 }
                 i++; BankName = BankName.Remove(BankName.ToString().Length - 1);//skiping seperator and deleteing excessive space, bank read
 
-                Bank tmpBank = new Bank(BankName);
+                while (Words[i] != ";")
+                {
+                    BankPass += Words[i];// BankName += " ";//adds space if there should be one, if not its deleted when exiting loop
+                    i++;
+                }
+                i++;// BankPass = BankPass.Remove(BankPass.ToString().Length - 1);//skiping seperator and deleteing excessive space, bank read
+
+                Bank tmpBank = new Bank(BankName,BankPass);
                 Client tmpClient = null;
                 PaymentCard PCard = null;
 
@@ -194,9 +201,9 @@ namespace ProjektOkienka
             file.Close();
         }
 
-        public static void AddBank(string Name)
+        public static void AddBank(string Name, string Pass)
         {
-            Banks.Add(new Bank(Name));
+            Banks.Add(new Bank(Name,Pass));
         }
 
         public static void AddBank(Bank ToAdd)

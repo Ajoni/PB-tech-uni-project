@@ -48,6 +48,12 @@
     <Compile Include="Archive.cs" />
     <Compile Include="ATMCard.cs" />
     <Compile Include="Bank.cs" />
+    <Compile Include="BankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankForm.Designer.cs">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BanknotFoundException.cs" />
     <Compile Include="CardNotFoundException.cs" />
     <Compile Include="Client.cs" />
@@ -77,6 +83,9 @@
     <Compile Include="ServiceEstablishment.cs" />
     <Compile Include="Shop.cs" />
     <Compile Include="TransFirm.cs" />
+    <EmbeddedResource Include="BankForm.resx">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

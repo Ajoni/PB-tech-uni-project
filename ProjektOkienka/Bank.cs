@@ -11,9 +11,10 @@ namespace ProjektOkienka
         public string Name { get; set; }
         public string Password { get; set; }
 
-        public Bank(String SetName)
+        public Bank(String SetName,string SetPassword)
         {
             Name = SetName;
+            Password = SetPassword;
         }
 
         public bool Authorize()
@@ -87,7 +88,7 @@ namespace ProjektOkienka
 
         public override string ToString()
         {
-            string line = Name + " ; " + Clients.Count() + " ";
+            string line = $"{Name} ; {Password} ; {Clients.Count()} ";
             foreach (Client c in Clients)
                 line += c.ToString();
             return line;

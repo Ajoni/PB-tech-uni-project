@@ -1,4 +1,4 @@
-Bank1 ; 2 1234644 ToHaslo } FirmaTrans1 } Trans ; 1 12,34 1234567891234567 Bank1 } FirmaTrans1  } ATM | ; 1 2 } 3 } Serv ; 0 ;
-Bank2 ; 1 12 Haslo2 } FirmaTrans2 } Trans ; 1 12,34 1234567891234567 Bank2 } FirmaTrans2 } ATM | ;
-Bank3 ; 1 12345646 123 } Sklep1 } Shop ; 1 0 123 Bank3 } Sklep1 } Debit | ;
-Bank4 ; 2 5654332 Haslo } Centrum Uslug } Serv ; 1 6543,32 345678 Bank4 } Centrum Uslug } Credit | ; 123 qwe } Firma Trans3 } Trans ; 1 1877,91 87891273 Bank4 } Firma Trans3 } ATM | ;
+Bank1 ; 1 ; 2 1234644 ToHaslo } FirmaTrans1 } Trans ; 1 12,34 1234567891234567 Bank1 } FirmaTrans1  } ATM | ; 1 2 } 3 } Serv ; 0 ;
+Bank2 ; 2 ; 1 12 Haslo2 } FirmaTrans2 } Trans ; 1 12,34 1234567891234567 Bank2 } FirmaTrans2 } ATM | ;
+Bank3 ; 3 ; 1 12345646 123 } Sklep1 } Shop ; 1 0 123 Bank3 } Sklep1 } Debit | ;
+Bank4 ; 4 ; 2 5654332 Haslo } Centrum Uslug } Serv ; 1 6543,32 345678 Bank4 } Centrum Uslug } Credit | ; 123 qwe } Firma Trans3 } Trans ; 1 1877,91 87891273 Bank4 } Firma Trans3 } ATM | ;
