@@ -21,21 +21,30 @@ namespace ProjektOkienka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (isLogged(textBox1.Text, textBox2.Text) == 1)
+            switch (isLogged(textBox1.Text, textBox2.Text))
             {
-                var form = new ClientForm();
-                form.Show(this);
+                case 1:
+                {
+                    var form = new ClientForm();
+                        this.Hide();
+                        form.Show(this);
+                        break;
+                }
+
+                case 2:
+                {
+                    var form = new BankForm();
+                    this.Hide();
+                    form.Show(this);
+                        break;
+                }
+                default:
+                    {
+                        var form = new BadLoginPopUpForm();
+                        form.Show(this);
+                        break;
+                    }
             }
-            //else textBox1.Text = "DDDDDDDDsdasdasd";
-            if (isLogged(textBox1.Text, textBox2.Text) == 2)
-            {
-                var form = new BankForm();
-                form.Show(this);
-            }
-            else textBox1.Text = "asdasdasd";
-            if(textBox1.Text== PaymentCardServiceCenter.GetBanks()[0].Name && textBox2.Text== PaymentCardServiceCenter.GetBanks()[0].Password) textBox1.Text = "tak";
-            textBox3.Text = PaymentCardServiceCenter.GetBanks()[0].Name;
-            textBox4.Text = PaymentCardServiceCenter.GetBanks()[0].Password;
         }
 
         private int isLogged(string login, string password)

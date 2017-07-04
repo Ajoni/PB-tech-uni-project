@@ -47,6 +47,12 @@
   <ItemGroup>
     <Compile Include="Archive.cs" />
     <Compile Include="ATMCard.cs" />
+    <Compile Include="BadLoginPopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadLoginPopUpForm.Designer.cs">
+      <DependentUpon>BadLoginPopUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bank.cs" />
     <Compile Include="BankForm.cs">
       <SubType>Form</SubType>
@@ -83,8 +89,14 @@
     <Compile Include="ServiceEstablishment.cs" />
     <Compile Include="Shop.cs" />
     <Compile Include="TransFirm.cs" />
+    <EmbeddedResource Include="BadLoginPopUpForm.resx">
+      <DependentUpon>BadLoginPopUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BankForm.resx">
       <DependentUpon>BankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
