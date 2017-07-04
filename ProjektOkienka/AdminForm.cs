@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjektOkienka
 {
-    public partial class BankForm : Form
+    public partial class AdminForm : Form
     {
-        public BankForm(string name, LoginForm LogForm)
+        public AdminForm(LoginForm LogForm)
         {
             InitializeComponent();
         }

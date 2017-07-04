@@ -14,6 +14,7 @@ namespace ProjektOkienka
 
     public partial class LoginForm : Form
     {
+        public static string LoggedName;
         public LoginForm()
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace ProjektOkienka
             {
                 case 1:
                 {
-                    var form = new ClientForm();
+                        LoggedName = textBox1.Text;
+                        var form = new ClientForm(textBox1.Text,this);
                         this.Hide();
                         form.Show(this);
                         break;
@@ -33,18 +35,29 @@ namespace ProjektOkienka
 
                 case 2:
                 {
-                    var form = new BankForm();
-                    this.Hide();
-                    form.Show(this);
+                         var form = new BankForm(textBox1.Text, this);
+                        LoggedName = textBox1.Text;
+                        this.Hide();
+                         form.Show(this);
+                        break;
+                }
+                case 3:
+                {
+                        var form = new AdminForm(this);
+                        this.Hide();
+                        form.Show();
                         break;
                 }
                 default:
                     {
                         var form = new BadLoginPopUpForm();
-                        form.Show(this);
+                        LoggedName = textBox1.Text;
+                        form.ShowDialog(this);
                         break;
                     }
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private int isLogged(string login, string password)

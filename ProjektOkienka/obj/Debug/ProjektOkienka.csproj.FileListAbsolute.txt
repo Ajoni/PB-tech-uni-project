@@ -10,3 +10,4 @@ C:\Users\adam5\OneDrive\Dokumenty\Visual Studio 2017\Projects\ProjektOkienka\Pro
 C:\Users\adam5\OneDrive\Dokumenty\Visual Studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.BankForm.resources
 C:\Users\adam5\OneDrive\Dokumenty\Visual Studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.ClientForm.resources
 C:\Users\adam5\OneDrive\Dokumenty\Visual Studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.BadLoginPopUpForm.resources
+C:\Users\adam5\OneDrive\Dokumenty\Visual Studio 2017\Projects\ProjektOkienka\ProjektOkienka\obj\Debug\ProjektOkienka.AdminForm.resources
