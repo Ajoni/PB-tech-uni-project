@@ -83,14 +83,6 @@ namespace ProjektOkienka
             return 0;
         }
 
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            textBox2.Text = "";
-        }
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
-        }
 
     }
 }

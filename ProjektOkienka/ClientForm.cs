@@ -17,6 +17,7 @@ namespace ProjektOkienka
         public ClientForm(string name, LoginForm SetLogForm)
         {
             InitializeComponent();
+            label1.Text = $"Logged in as {name}";
             LoggedClient = PaymentCardServiceCenter.FindClient(name);
             LogForm = SetLogForm;
             foreach(PaymentCard pc in LoggedClient.GetCards())
