@@ -31,5 +31,28 @@ namespace ProjektOkienka
             this.Close();
             LogForm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //LoggedClient.RemoveCard(RemoveCardBox.Text);
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                dataGridView1.Rows.RemoveAt(item.Index);
+                RemoveCardBox.Text += $"{item.Index} ";
+                
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PaymentCard card = LoggedClient.FindCard(dataGridView1.CurrentRow.Cells["Nr"].Value.ToString());
+            card.AddFunds(Convert.ToDouble($"{intFundsBox.Text},{floatFundsBox.Text}"));
+            dataGridView1.CurrentRow.Cells["Funds"].Value = card.CheckFunds();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoggedClient.FindCard(ManageFundsBox.Text).Pay(Convert.ToDouble($"{intFundsBox.Text},{floatFundsBox.Text}"));
+        }
     }
 }

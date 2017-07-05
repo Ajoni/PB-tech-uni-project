@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.RemoveCardBox = new System.Windows.Forms.TextBox();
-            this.FundsBox = new System.Windows.Forms.TextBox();
+            this.intFundsBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Nr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Funds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Rmvbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,6 +65,8 @@
             this.TitlePay = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.floatPay = new System.Windows.Forms.TextBox();
+            this.floatFundsBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -115,7 +117,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(896, -1);
+            this.button1.Location = new System.Drawing.Point(896, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 35);
             this.button1.TabIndex = 1;
@@ -148,12 +150,12 @@
             this.RemoveCardBox.Size = new System.Drawing.Size(172, 22);
             this.RemoveCardBox.TabIndex = 2;
             // 
-            // FundsBox
+            // intFundsBox
             // 
-            this.FundsBox.Location = new System.Drawing.Point(6, 94);
-            this.FundsBox.Name = "FundsBox";
-            this.FundsBox.Size = new System.Drawing.Size(100, 22);
-            this.FundsBox.TabIndex = 3;
+            this.intFundsBox.Location = new System.Drawing.Point(6, 94);
+            this.intFundsBox.Name = "intFundsBox";
+            this.intFundsBox.Size = new System.Drawing.Size(82, 22);
+            this.intFundsBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -195,14 +197,15 @@
             this.Bank.Name = "Bank";
             this.Bank.ReadOnly = true;
             // 
-            // button2
+            // Rmvbtn
             // 
-            this.button2.Location = new System.Drawing.Point(6, 92);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Rmvbtn.Location = new System.Drawing.Point(6, 92);
+            this.Rmvbtn.Name = "Rmvbtn";
+            this.Rmvbtn.Size = new System.Drawing.Size(75, 23);
+            this.Rmvbtn.TabIndex = 5;
+            this.Rmvbtn.Text = "Remove";
+            this.Rmvbtn.UseVisualStyleBackColor = true;
+            this.Rmvbtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -212,11 +215,12 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.Rmvbtn);
             this.groupBox2.Controls.Add(this.RemoveCardBox);
             this.groupBox2.Location = new System.Drawing.Point(6, 21);
             this.groupBox2.Name = "groupBox2";
@@ -243,11 +247,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.floatFundsBox);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.ManageFundsBox);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.FundsBox);
+            this.groupBox3.Controls.Add(this.intFundsBox);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Location = new System.Drawing.Point(195, 21);
             this.groupBox3.Name = "groupBox3";
@@ -264,6 +270,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Remove";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -318,9 +325,9 @@
             this.groupBox5.Controls.Add(this.RecievierNamePay);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.ClientCardPay);
-            this.groupBox5.Location = new System.Drawing.Point(479, 230);
+            this.groupBox5.Location = new System.Drawing.Point(479, 227);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(490, 165);
+            this.groupBox5.Size = new System.Drawing.Size(490, 172);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Payment";
@@ -336,7 +343,7 @@
             // 
             // ClientCardPay
             // 
-            this.ClientCardPay.Location = new System.Drawing.Point(12, 81);
+            this.ClientCardPay.Location = new System.Drawing.Point(9, 81);
             this.ClientCardPay.Name = "ClientCardPay";
             this.ClientCardPay.Size = new System.Drawing.Size(172, 22);
             this.ClientCardPay.TabIndex = 4;
@@ -352,7 +359,7 @@
             // 
             // RecievierNamePay
             // 
-            this.RecievierNamePay.Location = new System.Drawing.Point(9, 135);
+            this.RecievierNamePay.Location = new System.Drawing.Point(9, 134);
             this.RecievierNamePay.Name = "RecievierNamePay";
             this.RecievierNamePay.Size = new System.Drawing.Size(172, 22);
             this.RecievierNamePay.TabIndex = 6;
@@ -392,7 +399,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 18);
+            this.label9.Location = new System.Drawing.Point(9, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 17);
             this.label9.TabIndex = 11;
@@ -400,7 +407,7 @@
             // 
             // TitlePay
             // 
-            this.TitlePay.Location = new System.Drawing.Point(9, 39);
+            this.TitlePay.Location = new System.Drawing.Point(9, 38);
             this.TitlePay.Name = "TitlePay";
             this.TitlePay.Size = new System.Drawing.Size(468, 22);
             this.TitlePay.TabIndex = 12;
@@ -408,7 +415,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(283, 84);
+            this.label10.Location = new System.Drawing.Point(285, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(12, 17);
             this.label10.TabIndex = 13;
@@ -416,10 +423,26 @@
             // 
             // floatPay
             // 
-            this.floatPay.Location = new System.Drawing.Point(293, 81);
+            this.floatPay.Location = new System.Drawing.Point(296, 81);
             this.floatPay.Name = "floatPay";
             this.floatPay.Size = new System.Drawing.Size(94, 22);
             this.floatPay.TabIndex = 14;
+            // 
+            // floatFundsBox
+            // 
+            this.floatFundsBox.Location = new System.Drawing.Point(98, 94);
+            this.floatFundsBox.Name = "floatFundsBox";
+            this.floatFundsBox.Size = new System.Drawing.Size(94, 22);
+            this.floatFundsBox.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(89, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Text = ",";
             // 
             // ClientForm
             // 
@@ -456,7 +479,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox FundsBox;
+        private System.Windows.Forms.TextBox intFundsBox;
         private System.Windows.Forms.TextBox RemoveCardBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -483,9 +506,11 @@
         private System.Windows.Forms.TextBox ManageFundsBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Rmvbtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Funds;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bank;
+        private System.Windows.Forms.TextBox floatFundsBox;
+        private System.Windows.Forms.Label label11;
     }
 }
