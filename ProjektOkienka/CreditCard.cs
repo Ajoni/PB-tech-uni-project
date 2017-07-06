@@ -14,5 +14,9 @@
         {
             return base.ToString() + "Credit" + " | ";
         }
+        public override string CardType()
+        {
+            return "Credit";
+        }
     }
 }

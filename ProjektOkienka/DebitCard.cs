@@ -14,5 +14,9 @@
         {
             return base.ToString() + "Debit" + " | ";
         }
+        public override string CardType()
+        {
+            return "Debit";
+        }
     }
 }

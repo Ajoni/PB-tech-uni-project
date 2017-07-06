@@ -55,5 +55,6 @@
         {
             return Funds.ToString() + " " + Nr + " " + BankName + " } " + OwnerName + " } ";
         }
+        public virtual string CardType() { return "base"; }
     }
 }
