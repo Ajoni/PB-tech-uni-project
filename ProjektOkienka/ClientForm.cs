@@ -24,6 +24,13 @@ namespace ProjektOkienka
             {
                 dataGridView1.Rows.Add(pc.GetNr(), pc.CheckFunds(), pc.GetBank(),pc.CardType());
             }
+            foreach(Payment p in PaymentCardServiceCenter.GetPayments())
+            {
+                if (LoggedClient.GetKRS()=="12")
+                {
+                    dataGridView2.Rows.Add(p.Title, p.FromKRS, p.Amount, p.ToKRS, p.ToCard);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -119,17 +126,25 @@ namespace ProjektOkienka
                 LoggedClient.RequestAuthorization(card, amount, RecievierNamePay.Text, RecievierCardPay.Text, TitlePay.Text);
                 card.Pay(amount);
             }
+            catch (FormatException)
+            {
+                ErrorLabel.Text = " Not a valid input"; 
+            }
+            catch(InvalidValueException)
+            {
+                ErrorLabel.Text = "Enter a positive value.";
+            }
             catch (RequestRejectedException ex)
             {
                 ErrorLabel.Text = $"Bank {ex.BankName} has rejected Your request";
             }
-            catch(InvalidValueException ex)
+            catch(ClientNotFoundException ex)
             {
-                ErrorLabel.Text = $"{ex.val} is not a valid input";
+                ErrorLabel.Text = $"{ex.KRS} not found";
             }
-            catch(FormatException ex)
+            catch(CardNotFoundException ex)
             {
-                ErrorLabel.Text = $"{ex.ToString()} is not a valid input";
+                ErrorLabel.Text = $"{ex.nr} not found";
             }
         }
     }
