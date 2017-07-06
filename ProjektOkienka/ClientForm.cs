@@ -14,6 +14,7 @@ namespace ProjektOkienka
     {
         Client LoggedClient;
         LoginForm LogForm;
+        List<Payment> ClientsPayments = new List<Payment>();
         public ClientForm(string name, LoginForm SetLogForm)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace ProjektOkienka
             {
                 if (p.FromKRS == LoggedClient.GetKRS())
                 {
+                    ClientsPayments.Add(p);
                     dataGridView2.Rows.Add(p.Title, p.FromKRS, p.Amount, p.ToKRS, p.ToCard);
                 }
             }
@@ -125,6 +127,7 @@ namespace ProjektOkienka
                 double amount = Convert.ToDouble($"{intPay.Text},{floatPay.Text}");
                 LoggedClient.RequestAuthorization(card, amount, RecievierNamePay.Text, RecievierCardPay.Text, TitlePay.Text);
                 card.Pay(amount);
+                PaymentCardServiceCenter.DB.Write()
             }
             catch (FormatException)
             {
