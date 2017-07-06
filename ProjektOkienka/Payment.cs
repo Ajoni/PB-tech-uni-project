@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return $"{FromKRS} ; {FromCard} ; {Amount} ; {ToKRS} ; {ToCard} ; {Title} ; { Date} ;";
+            return $"{FromKRS};{FromCard};{Amount};{ToKRS};{ToCard};{Title};{ Date};";
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ProjektOkienka
             PathToFile = ToSet;
         }
 
-        private List<Payment> Payments = new List<Payment>();
+        public List<Payment> Payments = new List<Payment>();
 
         public Archive(string Path)
         {

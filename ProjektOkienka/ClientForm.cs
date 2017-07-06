@@ -24,9 +24,9 @@ namespace ProjektOkienka
             {
                 dataGridView1.Rows.Add(pc.GetNr(), pc.CheckFunds(), pc.GetBank(),pc.CardType());
             }
-            foreach(Payment p in PaymentCardServiceCenter.GetPayments())
+            foreach(Payment p in PaymentCardServiceCenter.DB.Payments)
             {
-                if (LoggedClient.GetKRS()=="12")
+                if (p.FromKRS == LoggedClient.GetKRS())
                 {
                     dataGridView2.Rows.Add(p.Title, p.FromKRS, p.Amount, p.ToKRS, p.ToCard);
                 }
