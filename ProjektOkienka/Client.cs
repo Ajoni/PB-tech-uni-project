@@ -40,6 +40,10 @@ namespace ProjektOkienka
         {
             PaymentCardServiceCenter.AuthorizePayment(new Payment(KRS, Used.GetNr(), Amount.ToString(), ToKRS, ToCard, Title, DateTime.Now.ToString()), Used);
         }
+        public void RequestAuthorization(Payment payment,PaymentCard Card)
+        {
+            PaymentCardServiceCenter.AuthorizePayment(payment, Card);
+        }
 
         public List<PaymentCard> GetCards()
         {
@@ -76,6 +80,10 @@ namespace ProjektOkienka
         {
             string line = KRS + " " + Password + " } " + Name + " } ";
             return line;
+        }
+        public virtual new string GetType()
+        {
+            return "base";
         }
     }
 }

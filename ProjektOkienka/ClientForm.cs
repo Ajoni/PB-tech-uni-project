@@ -15,6 +15,7 @@ namespace ProjektOkienka
         Client LoggedClient;
         LoginForm LogForm;
         List<Payment> ClientsPayments = new List<Payment>();
+        static bool userClose = true;
         public ClientForm(string name, LoginForm SetLogForm)
         {
             InitializeComponent();
@@ -30,13 +31,14 @@ namespace ProjektOkienka
                 if (p.FromKRS == LoggedClient.GetKRS())
                 {
                     ClientsPayments.Add(p);
-                    dataGridView2.Rows.Add(p.Title, p.FromKRS, p.Amount, p.ToKRS, p.ToCard);
+                    dataGridView2.Rows.Add(p.Title, p.FromKRS, p.Amount, p.ToKRS, p.ToCard, p.Date);
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            userClose = false;
             this.Close();
             LogForm.Show();
         }
@@ -63,6 +65,7 @@ namespace ProjektOkienka
             PaymentCard card = LoggedClient.FindCard(dataGridView1.CurrentRow.Cells["Nr"].Value.ToString());
             card.Pay(Convert.ToDouble($"{intFundsBox.Text},{floatFundsBox.Text}"));
             dataGridView1.CurrentRow.Cells["Funds"].Value = card.CheckFunds();
+
         }
 
         private void Debitbtn_Click(object sender, EventArgs e)
@@ -125,9 +128,12 @@ namespace ProjektOkienka
             {
                 PaymentCard card = LoggedClient.FindCard(dataGridView1.CurrentRow.Cells["Nr"].Value.ToString());
                 double amount = Convert.ToDouble($"{intPay.Text},{floatPay.Text}");
-                LoggedClient.RequestAuthorization(card, amount, RecievierNamePay.Text, RecievierCardPay.Text, TitlePay.Text);
+                Payment pay = new Payment(LoggedClient.GetKRS(),card.GetNr(), amount.ToString(), RecievierNamePay.Text, RecievierCardPay.Text, TitlePay.Text, DateTime.Now.ToString());
+                LoggedClient.RequestAuthorization(pay,card);
                 card.Pay(amount);
-                PaymentCardServiceCenter.DB.Write()
+                dataGridView1.CurrentRow.Cells["Funds"].Value = card.CheckFunds();
+                dataGridView2.Rows.Add(pay.Title, pay.FromKRS, pay.Amount, pay.ToKRS, pay.ToCard,pay.Date);
+                //PaymentCardServiceCenter.DB.Write(pay);
             }
             catch (FormatException)
             {
@@ -150,5 +156,28 @@ namespace ProjektOkienka
                 ErrorLabel.Text = $"{ex.nr} not found";
             }
         }
+        private void Filter_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+            foreach(Payment p in ClientsPayments)
+            {
+                if (!p.Title.Contains(FilterTitle.Text)) continue;
+                if (!p.FromCard.Contains(FilterFCard.Text)) continue;
+                if (!p.Amount.Contains(FilterAmount.Text)) continue;
+                if (!p.ToKRS.Contains(FilterRec.Text)) continue;
+                if (!p.ToCard.Contains(FilterTCard.Text)) continue;
+                if (!p.Date.Contains(FilterDate.Text)) continue;
+                dataGridView2.Rows.Add(p.Title, p.FromCard, p.Amount, p.ToKRS, p.ToKRS, p.Date);
+            }
+        }
+
+        private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (userClose)
+            {
+                Application.Exit();
+            }
+        }
+
     }
 }

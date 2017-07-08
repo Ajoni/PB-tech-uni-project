@@ -15,5 +15,9 @@ namespace ProjektOkienka
                 line += c.ToString();
             return base.ToString() + "Shop ; " + line + "; ";
         }
+        public override string GetType()
+        {
+            return "Shop";
+        }
     }
 }

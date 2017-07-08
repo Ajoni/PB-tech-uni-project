@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.PaymentBtn = new System.Windows.Forms.Button();
             this.floatPay = new System.Windows.Forms.TextBox();
@@ -59,22 +60,34 @@
             this.intFundsBox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Nr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Funds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ErrorLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FilterDate = new System.Windows.Forms.TextBox();
+            this.FilterTCard = new System.Windows.Forms.TextBox();
+            this.FilterRec = new System.Windows.Forms.TextBox();
+            this.FilterAmount = new System.Windows.Forms.TextBox();
+            this.FilterFCard = new System.Windows.Forms.TextBox();
+            this.Filter = new System.Windows.Forms.Button();
+            this.FilterTitle = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ToCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -84,8 +97,8 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -111,6 +124,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Payment Cards";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(493, 144);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 17);
+            this.ErrorLabel.TabIndex = 19;
             // 
             // groupBox5
             // 
@@ -187,7 +209,7 @@
             // 
             this.RecievierCardPay.Location = new System.Drawing.Point(3, 180);
             this.RecievierCardPay.Name = "RecievierCardPay";
-            this.RecievierCardPay.Size = new System.Drawing.Size(172, 22);
+            this.RecievierCardPay.Size = new System.Drawing.Size(201, 22);
             this.RecievierCardPay.TabIndex = 10;
             // 
             // label7
@@ -219,7 +241,7 @@
             // 
             this.RecievierNamePay.Location = new System.Drawing.Point(3, 134);
             this.RecievierNamePay.Name = "RecievierNamePay";
-            this.RecievierNamePay.Size = new System.Drawing.Size(172, 22);
+            this.RecievierNamePay.Size = new System.Drawing.Size(201, 22);
             this.RecievierNamePay.TabIndex = 6;
             // 
             // groupBox1
@@ -237,9 +259,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Rmvbtn);
-            this.groupBox2.Location = new System.Drawing.Point(390, 23);
+            this.groupBox2.Location = new System.Drawing.Point(390, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(81, 107);
+            this.groupBox2.Size = new System.Drawing.Size(81, 109);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove Card";
@@ -398,25 +420,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(476, 390);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(896, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(492, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
             // Nr
             // 
             this.Nr.HeaderText = "Nr";
@@ -443,15 +446,6 @@
             this.Type.ReadOnly = true;
             this.Type.Width = 50;
             // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(493, 144);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(0, 17);
-            this.ErrorLabel.TabIndex = 19;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox6);
@@ -463,6 +457,133 @@
             this.tabPage2.Text = "Payment history";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.label5);
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Controls.Add(this.label2);
+            this.groupBox6.Controls.Add(this.FilterDate);
+            this.groupBox6.Controls.Add(this.FilterTCard);
+            this.groupBox6.Controls.Add(this.FilterRec);
+            this.groupBox6.Controls.Add(this.FilterAmount);
+            this.groupBox6.Controls.Add(this.FilterFCard);
+            this.groupBox6.Controls.Add(this.Filter);
+            this.groupBox6.Controls.Add(this.FilterTitle);
+            this.groupBox6.Location = new System.Drawing.Point(3, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(972, 61);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(724, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 17);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Date";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(618, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 17);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "To card";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(495, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 17);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Receiver";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(388, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Amount";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(279, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "From card";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Title";
+            // 
+            // FilterDate
+            // 
+            this.FilterDate.Location = new System.Drawing.Point(727, 27);
+            this.FilterDate.Name = "FilterDate";
+            this.FilterDate.Size = new System.Drawing.Size(100, 22);
+            this.FilterDate.TabIndex = 6;
+            // 
+            // FilterTCard
+            // 
+            this.FilterTCard.Location = new System.Drawing.Point(612, 27);
+            this.FilterTCard.Name = "FilterTCard";
+            this.FilterTCard.Size = new System.Drawing.Size(109, 22);
+            this.FilterTCard.TabIndex = 5;
+            // 
+            // FilterRec
+            // 
+            this.FilterRec.Location = new System.Drawing.Point(492, 27);
+            this.FilterRec.Name = "FilterRec";
+            this.FilterRec.Size = new System.Drawing.Size(114, 22);
+            this.FilterRec.TabIndex = 4;
+            // 
+            // FilterAmount
+            // 
+            this.FilterAmount.Location = new System.Drawing.Point(391, 27);
+            this.FilterAmount.Name = "FilterAmount";
+            this.FilterAmount.Size = new System.Drawing.Size(95, 22);
+            this.FilterAmount.TabIndex = 3;
+            // 
+            // FilterFCard
+            // 
+            this.FilterFCard.Location = new System.Drawing.Point(282, 27);
+            this.FilterFCard.Name = "FilterFCard";
+            this.FilterFCard.Size = new System.Drawing.Size(96, 22);
+            this.FilterFCard.TabIndex = 2;
+            // 
+            // Filter
+            // 
+            this.Filter.Location = new System.Drawing.Point(877, 13);
+            this.Filter.Name = "Filter";
+            this.Filter.Size = new System.Drawing.Size(95, 42);
+            this.Filter.TabIndex = 1;
+            this.Filter.Text = "Filter";
+            this.Filter.UseVisualStyleBackColor = true;
+            this.Filter.Click += new System.EventHandler(this.Filter_Click);
+            // 
+            // FilterTitle
+            // 
+            this.FilterTitle.Location = new System.Drawing.Point(6, 27);
+            this.FilterTitle.Name = "FilterTitle";
+            this.FilterTitle.Size = new System.Drawing.Size(267, 22);
+            this.FilterTitle.TabIndex = 0;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -473,61 +594,75 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.ToCard});
+            this.ToCard,
+            this.Data});
             this.dataGridView2.Location = new System.Drawing.Point(3, 67);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(972, 243);
+            this.dataGridView2.Size = new System.Drawing.Size(972, 332);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Location = new System.Drawing.Point(3, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(972, 61);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Title";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 280;
+            this.dataGridViewTextBoxColumn1.Width = 240;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "From card";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 110;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 90;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Receiver";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 190;
+            this.dataGridViewTextBoxColumn4.Width = 130;
             // 
             // ToCard
             // 
             this.ToCard.HeaderText = "To card";
             this.ToCard.Name = "ToCard";
             this.ToCard.ReadOnly = true;
+            this.ToCard.Width = 110;
             // 
-            // textBox1
+            // Data
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.Data.HeaderText = "Date";
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            this.Data.Width = 120;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(896, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 35);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(492, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // ClientForm
             // 
@@ -540,6 +675,7 @@
             this.Name = "ClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientForm_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -553,9 +689,9 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,11 +740,24 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox FilterTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ToCard;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox FilterDate;
+        private System.Windows.Forms.TextBox FilterTCard;
+        private System.Windows.Forms.TextBox FilterRec;
+        private System.Windows.Forms.TextBox FilterAmount;
+        private System.Windows.Forms.TextBox FilterFCard;
+        private System.Windows.Forms.Button Filter;
     }
 }
