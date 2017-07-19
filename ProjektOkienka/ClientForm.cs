@@ -45,11 +45,15 @@ namespace ProjektOkienka
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoggedClient.RemoveCard(dataGridView1.CurrentRow.Cells["Nr"].Value.ToString());
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            try
             {
-                dataGridView1.Rows.RemoveAt(item.Index);
-                
+                LoggedClient.RemoveCard(dataGridView1.CurrentCell.Value.ToString());
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);
+
+            }
+            catch (CardNotFoundException)
+            {
+                ErrorLabel.Text = "Please select a row from tabel";
             }
         }
 
