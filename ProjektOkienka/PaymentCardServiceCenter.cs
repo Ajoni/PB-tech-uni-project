@@ -108,10 +108,11 @@ namespace ProjektOkienka
                             while (Words[i] != "}")
                             { CardOwner += Words[i]; i++; CardOwner += " "; }
                             i++; CardOwner = CardOwner.Remove(CardOwner.ToString().Length - 1); //skiping seperator and deleteing excessive space
+                            string KRS = Words[i];i++;
                             string CardType = Words[i]; i++;
-                            if (CardType == "ATM") { ATMCard tmpATM = new ATMCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpATM; }
-                            if (CardType == "Debit") { DebitCard tmpDebit = new DebitCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpDebit; }
-                            if (CardType == "Credit") { CreditCard tmpCredit = new CreditCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpCredit; }
+                            if (CardType == "ATM") { ATMCard tmpATM = new ATMCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpATM; }
+                            if (CardType == "Debit") { DebitCard tmpDebit = new DebitCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpDebit; }
+                            if (CardType == "Credit") { CreditCard tmpCredit = new CreditCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpCredit; }
                             tmpClient.AddCard(PCard);
                             tmpBank.AddCard(PCard);
                         }
@@ -175,10 +176,11 @@ namespace ProjektOkienka
                             while (Words[i] != "}")
                             { CardOwner += Words[i]; i++; CardOwner += " "; }
                             i++; CardOwner = CardOwner.Remove(CardOwner.ToString().Length - 1); //skiping seperator and deleteing excessive space
+                            string KRS = Words[i];i++;
                             string CardType = Words[i]; i++;
-                            if (CardType == "ATM") { ATMCard tmpATM = new ATMCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpATM; }
-                            if (CardType == "Debit") { DebitCard tmpDebit = new DebitCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpDebit; }
-                            if (CardType == "Credit") { CreditCard tmpCredit = new CreditCard(CardNr, CardFunds, CardBankName, CardOwner); PCard = tmpCredit; }
+                            if (CardType == "ATM") { ATMCard tmpATM = new ATMCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpATM; }
+                            if (CardType == "Debit") { DebitCard tmpDebit = new DebitCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpDebit; }
+                            if (CardType == "Credit") { CreditCard tmpCredit = new CreditCard(CardNr, CardFunds, CardBankName, CardOwner, KRS); PCard = tmpCredit; }
                             tmpClient.AddCard(PCard);
                         }
                         i++; //skiping seperator, cards read

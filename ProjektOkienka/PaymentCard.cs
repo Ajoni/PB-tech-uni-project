@@ -6,15 +6,16 @@
         private double Funds = 0.0;
         private string BankName;
         private string OwnerName;
+        public string OwnerKRS { get; set; }
 
-        public PaymentCard(string nr, double funds, string bankName, string ownerName)
+        public PaymentCard(string nr, double funds, string bankName, string ownerName, string ownerKRS)
         {
-            Nr = nr; if (funds < 0) throw new InvalidValueException(funds); Funds = funds; BankName = bankName; OwnerName = ownerName;
+            Nr = nr; if (funds < 0) throw new InvalidValueException(funds); Funds = funds; BankName = bankName; OwnerName = ownerName; OwnerKRS = ownerKRS;
         }
 
-        public PaymentCard(string nr, string bankName, string ownerName)
+        public PaymentCard(string nr, string bankName, string ownerName, string ownerKRS)
         {
-            Nr = nr; BankName = bankName; OwnerName = ownerName;
+            Nr = nr; BankName = bankName; OwnerName = ownerName; OwnerKRS = ownerKRS;
         }
 
         public void Pay(double amount)

@@ -33,6 +33,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ErrorBox = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CliPassBox = new System.Windows.Forms.TextBox();
             this.ServBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,22 +52,19 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.buttonATM = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CardKRSBox = new System.Windows.Forms.TextBox();
+            this.buttonDebit = new System.Windows.Forms.Button();
+            this.buttonCredit = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.RmvCardBtn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.LogoutBtn = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Funds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LogoutBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CliPassBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -142,6 +141,22 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(461, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Password";
+            // 
+            // CliPassBox
+            // 
+            this.CliPassBox.Location = new System.Drawing.Point(461, 41);
+            this.CliPassBox.Name = "CliPassBox";
+            this.CliPassBox.Size = new System.Drawing.Size(167, 22);
+            this.CliPassBox.TabIndex = 13;
             // 
             // ServBtn
             // 
@@ -300,13 +315,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.buttonATM);
             this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.button2);
-            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.CardKRSBox);
+            this.groupBox5.Controls.Add(this.buttonDebit);
+            this.groupBox5.Controls.Add(this.buttonCredit);
             this.groupBox5.Location = new System.Drawing.Point(6, 17);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(564, 117);
@@ -314,68 +327,53 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Add";
             // 
-            // button1
+            // buttonATM
             // 
-            this.button1.Location = new System.Drawing.Point(198, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "ATM";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Name";
+            this.buttonATM.Location = new System.Drawing.Point(198, 82);
+            this.buttonATM.Name = "buttonATM";
+            this.buttonATM.Size = new System.Drawing.Size(90, 23);
+            this.buttonATM.TabIndex = 12;
+            this.buttonATM.Text = "ATM";
+            this.buttonATM.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(310, 18);
+            this.label4.Location = new System.Drawing.Point(6, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "KRS";
             // 
-            // textBox1
+            // CardKRSBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 22);
-            this.textBox1.TabIndex = 6;
+            this.CardKRSBox.Location = new System.Drawing.Point(6, 43);
+            this.CardKRSBox.Name = "CardKRSBox";
+            this.CardKRSBox.Size = new System.Drawing.Size(242, 22);
+            this.CardKRSBox.TabIndex = 9;
             // 
-            // textBox2
+            // buttonDebit
             // 
-            this.textBox2.Location = new System.Drawing.Point(310, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 22);
-            this.textBox2.TabIndex = 9;
+            this.buttonDebit.Location = new System.Drawing.Point(6, 82);
+            this.buttonDebit.Name = "buttonDebit";
+            this.buttonDebit.Size = new System.Drawing.Size(90, 23);
+            this.buttonDebit.TabIndex = 8;
+            this.buttonDebit.Text = "Debit";
+            this.buttonDebit.UseVisualStyleBackColor = true;
+            this.buttonDebit.Click += new System.EventHandler(this.buttonDebit_Click);
             // 
-            // button2
+            // buttonCredit
             // 
-            this.button2.Location = new System.Drawing.Point(6, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Debit";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(102, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Credit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonCredit.Location = new System.Drawing.Point(102, 82);
+            this.buttonCredit.Name = "buttonCredit";
+            this.buttonCredit.Size = new System.Drawing.Size(90, 23);
+            this.buttonCredit.TabIndex = 11;
+            this.buttonCredit.Text = "Credit";
+            this.buttonCredit.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button4);
+            this.groupBox6.Controls.Add(this.RmvCardBtn);
             this.groupBox6.Location = new System.Drawing.Point(599, 17);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(175, 94);
@@ -383,14 +381,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Remove";
             // 
-            // button4
+            // RmvCardBtn
             // 
-            this.button4.Location = new System.Drawing.Point(22, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 67);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Remove";
-            this.button4.UseVisualStyleBackColor = true;
+            this.RmvCardBtn.Location = new System.Drawing.Point(22, 21);
+            this.RmvCardBtn.Name = "RmvCardBtn";
+            this.RmvCardBtn.Size = new System.Drawing.Size(134, 67);
+            this.RmvCardBtn.TabIndex = 1;
+            this.RmvCardBtn.Text = "Remove";
+            this.RmvCardBtn.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -401,13 +399,25 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.Funds,
             this.dataGridViewTextBoxColumn3});
             this.dataGridView2.Location = new System.Drawing.Point(6, 145);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(965, 248);
             this.dataGridView2.TabIndex = 3;
+            // 
+            // LogoutBtn
+            // 
+            this.LogoutBtn.Location = new System.Drawing.Point(897, 0);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(95, 35);
+            this.LogoutBtn.TabIndex = 2;
+            this.LogoutBtn.Text = "Logout";
+            this.LogoutBtn.UseVisualStyleBackColor = true;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -423,37 +433,17 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 150;
             // 
+            // Funds
+            // 
+            this.Funds.HeaderText = "Funds";
+            this.Funds.Name = "Funds";
+            this.Funds.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Type";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // LogoutBtn
-            // 
-            this.LogoutBtn.Location = new System.Drawing.Point(897, 0);
-            this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(95, 35);
-            this.LogoutBtn.TabIndex = 2;
-            this.LogoutBtn.Text = "Logout";
-            this.LogoutBtn.UseVisualStyleBackColor = true;
-            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Password";
-            // 
-            // CliPassBox
-            // 
-            this.CliPassBox.Location = new System.Drawing.Point(461, 41);
-            this.CliPassBox.Name = "CliPassBox";
-            this.CliPassBox.Size = new System.Drawing.Size(167, 22);
-            this.CliPassBox.TabIndex = 13;
             // 
             // BankForm
             // 
@@ -506,20 +496,19 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonATM;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox CardKRSBox;
+        private System.Windows.Forms.Button buttonDebit;
+        private System.Windows.Forms.Button buttonCredit;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button RmvCardBtn;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox CliPassBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Funds;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

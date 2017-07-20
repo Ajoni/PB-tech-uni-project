@@ -2,11 +2,11 @@
 {
     public class DebitCard : PaymentCard
     {
-        public DebitCard(string nr, double funds, string bankName, string ownerName) : base(nr, funds, bankName, ownerName)
+        public DebitCard(string nr, double funds, string bankName, string ownerName, string ownerKRS) : base(nr, funds, bankName, ownerName, ownerKRS)
         {
         }
 
-        public DebitCard(string nr, string bankName, string ownerName) : base(nr, bankName, ownerName)
+        public DebitCard(string nr, string bankName, string ownerName, string ownerKRS) : base(nr, bankName, ownerName, ownerKRS)
         {
         }
 

@@ -50,10 +50,10 @@ namespace ProjektOkienka
             return Cards;
         }
 
-        public void RequestCard(string BankName, string ClientName, int Type)
+        public void RequestCard(string BankName, int Type)
         {
             Bank tmpBank = PaymentCardServiceCenter.FindBank(BankName);
-            PaymentCard tmpCard = tmpBank.AuthorizeCard(ClientName, Type);
+            PaymentCard tmpCard = tmpBank.AuthorizeCard(Name,KRS, Type);
             AddCard(tmpCard);
         }
 

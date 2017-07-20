@@ -2,11 +2,11 @@
 {
     public class ATMCard : PaymentCard
     {
-        public ATMCard(string nr, double funds, string bankName, string ownerName) : base(nr, funds, bankName, ownerName)
+        public ATMCard(string nr, double funds, string bankName, string ownerName, string ownerKRS) : base(nr, funds, bankName, ownerName, ownerKRS)
         {
         }
 
-        public ATMCard(string nr, string bankName, string ownerName) : base(nr, bankName, ownerName)
+        public ATMCard(string nr, string bankName, string ownerName, string ownerKRS) : base(nr, bankName, ownerName, ownerKRS)
         {
         }
 

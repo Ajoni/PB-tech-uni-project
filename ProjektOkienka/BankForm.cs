@@ -67,5 +67,11 @@ namespace ProjektOkienka
             LoggedBank.AddClient(newShop);
             dataGridView1.Rows.Add(newShop.GetName(), newShop.GetKRS(), newShop.GetType());
         }
+
+        private void buttonDebit_Click(object sender, EventArgs e)
+        {
+            PaymentCard newCard = LoggedBank.AuthorizeCard(LoggedBank.FindClient(CardKRSBox.Text).GetName(), 1);
+            dataGridView2.Rows.Add(newCard.GetOwner(), CardKRSBox.Text, newCard.CheckFunds().ToString(), newCard.GetType());
+        }
     }
 }

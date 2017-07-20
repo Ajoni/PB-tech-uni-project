@@ -23,17 +23,17 @@ namespace ProjektOkienka
             if (rnd.Next() % 10 < 8) return true; else return false;
         }
 
-        public PaymentCard AuthorizeCard(string ClientName, int type)
+        public PaymentCard AuthorizeCard(string ClientName,string ClientKRS, int type)
         {
             Random rnd = new Random();
             string Nr = rnd.Next(10000000, 99999999).ToString() + rnd.Next(10000000, 99999999).ToString();
             if (rnd.Next(1, 10) < 8)
             {
-                if (type == 1) return new DebitCard(Nr, Name, ClientName);
+                if (type == 1) return new DebitCard(Nr, Name, ClientName, ClientKRS);
                 else
-                if (type == 2) return new CreditCard(Nr, Name, ClientName);
+                if (type == 2) return new CreditCard(Nr, Name, ClientName, ClientKRS);
                 else
-                if (type == 3) return new ATMCard(Nr, Name, ClientName); else throw new InvalidValueException(type);
+                if (type == 3) return new ATMCard(Nr, Name, ClientName, ClientKRS); else throw new InvalidValueException(type);
             }
             else throw new RequestRejectedException(Name);
         }

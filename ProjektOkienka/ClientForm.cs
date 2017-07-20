@@ -76,7 +76,7 @@ namespace ProjektOkienka
         {
             try
             {
-                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(), 1);
+                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(),LoggedClient.GetKRS(), 1);
                 dataGridView1.Rows.Add(card.GetNr(), card.CheckFunds(), card.GetBank(), card.CardType());
                 LoggedClient.AddCard(card);
             }
@@ -94,7 +94,7 @@ namespace ProjektOkienka
         {
             try
             {
-                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(), 2);
+                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(), LoggedClient.GetKRS(), 2);
                 dataGridView1.Rows.Add(card.GetNr(), card.CheckFunds(), card.GetBank(), card.CardType());
                 LoggedClient.AddCard(card);
             }
@@ -112,7 +112,7 @@ namespace ProjektOkienka
         {
             try
             {
-                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(), 3);
+                PaymentCard card = PaymentCardServiceCenter.FindBank(BankNameBox.Text).AuthorizeCard(LoggedClient.GetName(), LoggedClient.GetKRS(), 3);
                 dataGridView1.Rows.Add(card.GetNr(), card.CheckFunds(), card.GetBank(), card.CardType());
                 LoggedClient.AddCard(card);
             }
